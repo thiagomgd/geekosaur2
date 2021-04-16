@@ -1,0 +1,7 @@
+{{ $seed := "foo" }}
+{{ $random := delimit (shuffle (split (md5 $seed) "" )) "" }}
+
+<span class="spoilers" title="Click to show spoiler"
+    onclick="document.getElementById('{{$random}}').className = 'spoiler-text spoiler-show';"><span
+        class="spoiler-alert">(spoilers)</span>
+    <span id="{{ $random }}" class="spoiler-text">{{ .Get 0 }}</span></span>

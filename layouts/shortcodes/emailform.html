@@ -1,0 +1,15 @@
+<!-- Make sure you don't change the form action-->
+<form action="https://api.staticforms.xyz/submit" method="post">
+    <!-- Replace with accesKey sent to your email -->
+    <input type="hidden" name="accessKey" value="b7d2d75e-4db9-4768-ab19-68ea57cae4d5"> <!-- Required -->
+    <input type="text" name="name"> <!-- Optional -->
+    <input type="text" name="subject" defaultValue="{{.Get 0}}"> <!-- Optional -->
+    <input type="text" name="email"> <!-- Optional -->
+    <textarea name="message"></textarea> <!-- Optional -->
+    <!-- Specify @ as reply to value if you want it to be customers email -->
+    <input type="hidden" name="replyTo" value="@"> <!-- Optional -->
+
+    <input type="submit" value="Submit" />
+</form>
+<!-- If you want form to redirect to a specific url after submission -->
+<!-- <input type="hidden" name="redirectTo" value="https://example.com/contact/success"> Optional -->

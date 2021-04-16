@@ -1,0 +1,131 @@
+baseURL = "https://geekosaur.com/"
+languageCode = "en-us"
+title = "Geekosaur"
+theme = "mainroad"
+paginate = "10" # Number of posts per page
+ignoreErrors = ["error-remote-getjson"]
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[author]
+	name = "Falcon"
+
+[permalinks]
+    post = "/post/:slug"
+# 
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
+  
+# 
+# [params]
+#	description = "Random thoughts and adventures from this random guy."
+#    showReadMore = true
+
+#	twitter = "https://twitter.com/FalconSensei"
+#	reddit = "https://www.reddit.com/r/geekosaur/"
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    disable = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.instagram]
+    disable = false
+    simple = false
+  [privacy.twitter]
+    disable = false
+    enableDNT = true
+    simple = false
+  [privacy.vimeo]
+    disable = false
+    simple = true
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true
+
+
+# mainroad settings
+
+[Author] # Used in authorbox
+  name = "Falcon"
+  bio = "A guy that like books, music, board games and sharing content that I enjoy!"
+  # avatar = "img/avatar.png"
+  twitter = "FalconSensei"
+
+[Params]
+  subtitle = "" # Deprecated in favor of .Site.Params.logo.subtitle
+  description = "Random thoughts and adventures from this random guy." # Site description. Used in meta description
+  # copyright = "John Doe" # Footer copyright holder, otherwise will use site title
+  opengraph = true # Enable OpenGraph if true
+  schema = true # Enable Schema
+  twitter_cards = true # Enable Twitter Cards if true
+  readmore = true # Show "Read more" button in list if true
+  # authorbox = true # Show authorbox at bottom of pages if true
+  # toc = false # Enable Table of Contents
+  pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
+  post_meta = ["date", "categories"] # Order of post meta information
+  # mainSections = ["post", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
+  dateformat = "2006-01-02" # Change the format of dates
+  mathjax = false # Enable MathJax
+  # mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path
+  # mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
+  googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
+  customCSS = ["css/custom.css"] # Include custom CSS files
+  # customJS = ["js/custom.js"] # Include custom JS files
+
+[Params.style.vars]
+  highlightColor = "#4B0082" # indigo
+
+[Params.sidebar]
+  home = "right" # Configure layout for home page
+  list = "right"  # Configure layout for list pages
+  single = "right" # Configure layout for single pages
+  # Enable widgets in given order
+  widgets = ["search", "recent", "categories", "social", "booklist"]
+  # alternatively "ddg-search" can be used, to search via DuckDuckGo
+  # widgets = ["ddg-search", "recent", "categories", "taglist", "social", "languages"]
+
+[Params.widgets]
+  recent_num = 5 # Set the number of articles in the "Recent articles" widget
+  tags_counter = false # Enable counter for each tag in "Tags" widget
+
+ [Params.widgets.social]
+#   # Enable parts of social widget
+#   facebook = "username"
+   twitter = "FalconSensei"
+   instagram = "thiago.margarida"
+#   linkedin = "username"
+#   telegram = "username"
+#   github = "username"
+#   gitlab = "username"
+#   bitbucket = "username"
+#   email = "example@example.com"
+
+# Custom social links
+[[Params.widgets.social.custom]]
+  title = "Reddit"
+  url = "https://www.reddit.com/r/geekosaur/"
+  icon = "svg/reddit.svg" # Optional. Path relative to "layouts/partials"
+
+[[Params.widgets.social.custom]]
+  title = "AniList"
+  url = "https://anilist.co/user/FalconSensei/"
+  icon = "svg/anilist.svg" # Optional. Path relative to "layouts/partials"
+
+
+
+#[[Params.widgets.social.custom]]
+#  title = "My Home Page"
+#  url = "http://example.com"
